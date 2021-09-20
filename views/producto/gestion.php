@@ -34,9 +34,11 @@
         </tr>
     </thead>
     <tbody>
-        <?php while($pro = $productos->fetch_object()):?>
+        <?php 
+        $enumeracion = 1;
+        while($pro = $productos->fetch_object()):?>
         <tr>
-            <td><?= $pro->id ?></td>
+            <td><?= $enumeracion++ ?></td>
             <td><?= $pro->nombre ?></td>
             <td><?= $pro->descripcion ?></td>
             <td><?= $pro->precio ?></td>

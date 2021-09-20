@@ -216,7 +216,7 @@ class ProductoController{
             $producto->setId($id);
 
             $delete = $producto->delete();
-
+            
             if($delete){
                 $_SESSION['delete'] = 'success';
             }else{

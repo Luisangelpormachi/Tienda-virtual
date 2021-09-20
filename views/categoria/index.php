@@ -8,12 +8,14 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>N°</th>
                 <th>NOMBRE</th>
             </tr>
         </thead>
         <tbody>           
-            <?php while($categoria = $categorias->fetch_object()):?>           
+            <?php 
+            $enumeracion = 1;
+            while($categoria = $categorias->fetch_object()):?>           
                 <?php if(isset($_SESSION['success-crearCategoria']) && $categoria->id == $limit->id): ?>               
                 <tr>
                     <td class="success-crearCategoria" title="Último agregado"><?=$categoria->id?></td>
@@ -21,7 +23,7 @@
                 </tr>
                 <?php else: ?>
                 <tr>
-                    <td><?=$categoria->id?></td>
+                    <td><?=$enumeracion++?></td>
                     <td><?=$categoria->nombre?></td>
                 </tr>
                 <?php endif; ?>

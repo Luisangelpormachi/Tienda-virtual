@@ -85,7 +85,7 @@ class Producto{
 
     public function getAll(){
 
-        $sql = "SELECT * FROM productos ORDER BY id DESC";
+        $sql = "SELECT * FROM productos WHERE eliminado = 0  ORDER BY id DESC";
         $ejecutar = $this->db->query($sql);
 
         $result = false;
@@ -99,7 +99,7 @@ class Producto{
 
     public function getRandom($limit){
 
-        $sql = "SELECT * FROM productos ORDER BY RAND() LIMIT $limit";
+        $sql = "SELECT * FROM productos WHERE eliminado = 0 AND stock > 0 ORDER BY RAND() LIMIT $limit";
         $ejecutar = $this->db->query($sql);
 
         $result = false;
@@ -129,7 +129,7 @@ class Producto{
 
         $sql = "SELECT p.*, c.nombre AS 'categoria_nombre' FROM productos p"
                 ." INNER JOIN categorias c ON p.categoria_id = c.id"
-                ." WHERE p.categoria_id = {$this->getCategoria_id()}";
+                ." WHERE p.categoria_id = {$this->getCategoria_id()} AND eliminado = 0 AND stock > 0";
 
         $ejecutar = $this->db->query($sql);
         
@@ -146,7 +146,7 @@ class Producto{
 
     public function save(){
 
-        $sql = "INSERT INTO productos VALUES(NULL, {$this->getCategoria_id()}, '{$this->getNombre()}', '{$this->getDescripcion()}', {$this->getPrecio()}, {$this->getStock()}, null, CURDATE(), '{$this->getImagen()}')";
+        $sql = "INSERT INTO productos VALUES(NULL, {$this->getCategoria_id()}, '{$this->getNombre()}', '{$this->getDescripcion()}', {$this->getPrecio()}, {$this->getStock()}, null, CURDATE(), '{$this->getImagen()}', 0)";
 
         $ejecutar = $this->db->query($sql);
 
@@ -180,7 +180,8 @@ class Producto{
     public function delete(){
         
 
-        $sql = "DELETE FROM productos WHERE id = {$this->getId()}";
+        // $sql = "DELETE FROM productos WHERE id = {$this->getId()}";
+        $sql = "UPDATE productos SET eliminado = 1 WHERE id = {$this->getId()}";
         $ejecutar = $this->db->query($sql);
 
         $result = false;
