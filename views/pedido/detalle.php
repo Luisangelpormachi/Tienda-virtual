@@ -42,6 +42,7 @@
     Productos: <br><br>
 
     <div class="pedido-detalle">
+    <div class="table-wrapper">
     <table>
         <thead>
             <tr>
@@ -78,7 +79,7 @@
         </tbody>
     </table>
     </div>    
-                       
+    </div>                   
 </div>
 
 <?php  else: ?>

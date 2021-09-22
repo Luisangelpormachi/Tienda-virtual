@@ -22,6 +22,7 @@
     Total a pagar: S/.  <?= $pedido->coste ?><br>
     Productos: <br><br>
 
+    <div class="table-wrapper">
     <table>
         <thead>
             <tr>
@@ -57,7 +58,7 @@
             <?php endwhile; ?>
         </tbody>
     </table>
-
+    </div>
 </div>
 <?php else: ?>
 

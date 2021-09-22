@@ -1,6 +1,8 @@
 
 <h1>Registrarse</h1>
 
+<div id="register">
+
 <form action="<?= base_url ?>usuario/save" method="POST" class="form-register">
 
     <?php if(isset($_SESSION['register'])): ?>
@@ -44,6 +46,8 @@
     <input type="submit" value="Registrarse">
 
 </form>
+
+</div>
 
 <?php Utils::DeleteSession('register');?>
 <?php Utils::DeleteSession('errores');?>

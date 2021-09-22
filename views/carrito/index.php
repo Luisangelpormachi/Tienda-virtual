@@ -17,6 +17,7 @@
 
 <div class="sub-main">
 <?php if(isset($carrito) && $carrito != null) :?>
+    <div class="table-wrapper">
     <table>
         <thead>
             <tr>
@@ -63,7 +64,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
+    </div>
     <?php $stats = Utils::statsCarrito(); ?>
 
     <div class="total-carrito">

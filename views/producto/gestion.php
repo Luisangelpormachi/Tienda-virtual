@@ -21,7 +21,7 @@
 <?php endif; ?>
 
 <a href="<?= base_url ?>producto/create" class="button button-function">Crear Producto</a>
-
+<div class="table-wrapper">
 <table>
     <thead>
         <tr>
@@ -51,7 +51,7 @@
         <?php endwhile; ?>
     </tbody>
 </table>
-
+</div>
     
 </div>
 

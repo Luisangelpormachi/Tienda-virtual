@@ -4,7 +4,7 @@
 
 <div class="sub-main">
     <a href="<?= base_url ?>categoria/create" class="button button-function">Crear categoria</a>
-
+    <div class="table-wrapper">
     <table>
         <thead>
             <tr>
@@ -30,6 +30,7 @@
             <?php endwhile; ?>
         </tbody>
     </table>
+    </div>
 </div>
 
 <?php Utils::DeleteSession('success-crearCategoria'); ?>

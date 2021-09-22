@@ -8,6 +8,7 @@
 <?php endif;?>   
 
 <div class="sub-main">
+<div class="table-wrapper">
     <table>
         <thead>
             <tr>
@@ -38,5 +39,6 @@
             <?php endwhile; ?>
         </tbody>
     </table>
+</div>
 </div>
 

@@ -39,7 +39,7 @@
     </div>
     
     <ul>
-        <li><a href="<?= base_url ?>usuario/register">Registrate aquí</a></li>
+        <li><a href="<?= base_url ?>usuario/register#register">Registrate aquí</a></li>
     </ul>
 
     <?php elseif(isset($_SESSION['identity'])): ?>

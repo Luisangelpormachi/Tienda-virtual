@@ -78,35 +78,35 @@ a:hover{
     transition: all 1000ms;
 }
 
-#navbar{
+.navbar{
     height: 55px;
     background: #222;
     border-bottom: 4px solid #01b1ea;
 }
 
-#navbar ul{
+.navbar ul{
     list-style: none;
     text-decoration: none;
     margin: 0px auto;
     margin-left: 25px; 
 }
 
-#navbar ul li{
+.navbar ul li{
     line-height: 55px;
     float: left;
     border-right: 1px solid #363636;
     transition: all 380ms;
 }
 
-#navbar ul li:first-child{
+.navbar ul li:first-child{
     border-left: 1px solid #363636;
 }
 
-#navbar ul li:hover{
+.navbar ul li:hover{
     background: #01b1ea;
 }
 
-#navbar a{
+.navbar a{
     display: block;
     color: white;
     text-decoration: none;
@@ -509,5 +509,594 @@ table td:hover{
     transition: all 300ms;
 }
 
+.nav-toggle{
+    width: 100%;
+    margin-top: 0px;
+    font-size: 35px;
+    height: 100px;
+    display: none;
+}
+
+/*  RESPONSIVE */
 
 
+@media (max-width: 768px) {
+
+    .nav-toggle{
+        display: block;
+    }
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif, Helvetica, Arial;
+    }
+    
+    body{
+        background: url(../img/bg.png);
+    }
+    
+    a{
+        color: #01b1ea;
+        transition: all 380ms;
+    }
+    
+    a:visited{
+        color: #01b1ea;
+    }
+    
+    a:hover{
+        color: #555555;
+    }
+    
+    .cont-img{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    
+    #container{
+        width: 100%;
+        margin: 0px auto;
+        box-shadow: 0px 0px 10px gray;
+        background: white;
+    }
+    
+    #header{
+        width: 100%;
+        min-height: 250px;
+        background: #F0F0F0;       
+    }
+    
+    #logo{
+        width: 100%;
+        padding: 20px 0px;
+        margin-left: 0px;
+        float: left;
+    }
+    
+    #logo img{
+        float: left;
+        height: 100px;
+        margin-left: 20px;
+        transition: all 300ms;
+    }
+    
+    #logo img:hover{
+        transform: scale(1.3);
+        transition: all 1000ms;
+        cursor:pointer;
+    }
+    
+    #logo a{
+        float:  left;
+        letter-spacing: 2px;
+        color: #01b1ea;
+        font-size: 25px;
+        font-family: open sans, helvetica, arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 30px;
+        margin-left: 10px;
+        padding: 10px;
+        text-shadow: 0px 2px 1px #222222;
+        transition: all 1000ms;
+    }
+    
+    #logo a:hover{
+        text-shadow: 0px 2px 1px #222222, 0px 0px 4px #01b1ea;
+        transform: scale(1.1);
+        transition: all 1000ms;
+    }
+
+    .navbar{
+        flex-direction: column;
+        width: 100%;
+        background: #222;
+        border: 1px solid #c9c9c9;
+        border-radius: 0px;
+        border-bottom: 4px solid #01b1ea;
+        overflow: hidden;
+        position: fixed;
+        top: 0px;
+
+        height: calc(100% - 0px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    
+    .navbar ul{
+        list-style: none;
+        text-decoration: none;
+        margin: 0px auto;
+        margin-left: 0px; 
+    }
+    
+    .navbar ul li{
+        line-height: none;
+        float: none;
+        border-right: none;
+        border-bottom: 1px  solid rgba(204, 204, 204, 0.055);
+        transition: all 380ms;
+        padding: 20px;
+    }
+    
+    .navbar ul li:first-child{
+        border-left: none;
+    }
+    
+    .navbar ul li:hover{
+        background: #01b1ea;
+    }
+    
+    .navbar a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: none;
+        text-align: center;
+    }
+
+    #content{
+        width: 100%;
+        margin: 0px auto;
+        overflow: hidden;
+        background: white;
+    }
+    
+    #sidebar{
+        width: 100%;
+        min-height: 300px;
+        float: none;
+        /* margin: 20px auto; */
+        /* margin-top: 20px; */
+        /* margin-left: 10px; */
+        padding: 0px;
+    }
+    
+    #sidebar h3{
+        display: block;
+        color: #222;
+        width: 90%;
+        text-align: center;
+        padding: 10px 0px;
+        margin-bottom: 15px;
+        font-size: 23px;
+        font-weight: bold;
+        background: #e1e1e1;
+        border-bottom: none;
+        margin: 0px auto;
+    }
+    
+    
+    #sidebar .block-aside{
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: auto; 
+        text-align: center;
+    }
+    
+    #sidebar ul{
+        margin: 20px 30px;
+    }
+    
+    #sidebar ul li{
+        list-style: none;
+        margin: 5px 0px;
+        padding: 10px;
+        background: #222222;
+        border-radius: 5px;
+    }
+    
+    #sidebar ul li a{
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    #login form{
+        width: 90%;
+        margin: 0px auto;
+    }
+    
+    label,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select, textarea{
+        display: block;
+        width: 95%;
+        margin: 2px 0px;
+        font-size: 20px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select, textarea{
+    
+        border: 1px solid #c9c9c9;
+        box-shadow: 0px 0px 2px #ccc inset;
+        padding: 2px;
+        color: grey;
+        transition: all 300ms;
+        height: 30px;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    select:focus, textarea:focus{
+    
+        border: 1px solid #1579b5;
+        color: black;
+    }
+    
+    input[type="submit"],
+    input[type="button"],
+    button, .button{
+        display: block;
+        border-radius: 2px;
+        width: 150px;
+        padding: 5px 10px;
+        color: white;
+        background: #2979cd;
+        border: 1px solid #11608e;
+        cursor: pointer;
+        transition: all 300ms;
+        font-size: 17px;
+
+    }
+    
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    button:hover, .button:hover{
+        transform: scale(1.05);
+        opacity: 8;
+        box-shadow: white;
+        transition: all 300ms;
+        
+    }
+    
+    .button{
+        width: 250px;
+        background: #158d0df7;
+        color: white !important;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px rgba(19, 14, 14, 0.349);
+        margin: auto;
+     }
+    
+    .button-function{
+        width: 120px;
+        margin: 15px 0px;
+    }
+    
+    .button-gestion{
+        width: 68px;
+        margin: auto;
+        margin-top: 5px;
+    }
+    
+    .button-red{
+        background: rgb(226, 38, 38);
+        border: 1px solid red;
+    }
+    .button-green{
+        background: rgb(255, 196, 0);  
+        border: 1px solid rgb(255, 196, 0);  
+    }
+    
+    label,
+    input[type="submit"],
+    input[type="button"],
+    button{
+        display: block;
+        margin-top: 10px;
+    }
+    
+    #main{
+        width: 100%;
+        float: none;
+        flex-direction: column;
+        border-left: 1px solid #ccc;
+        box-shadow: -5px -1px 5px #ddd;
+        /* padding: 25px; */
+        min-height: auto;
+    }
+    
+    #main h1{
+    
+        font-size: 24px;
+        text-align: center;
+        font-weight: normal;
+        letter-spacing: 1px;
+        border-bottom: 2.1px  solid #ccc;
+        box-shadow: 10px 10px 0px 0px rgba(231, 231, 231, 0.781);
+        margin: 20px auto;
+        padding: 12px;
+        
+        
+        width: 90%;
+        margin: 5px auto;
+    }
+    
+    .sub-main{
+        width: 95%;
+        margin: 35px auto;
+    }
+    
+    .form-register{
+    
+        width: 80%;
+        margin: 50px auto;
+    
+    }
+    
+    .product{
+        width: 100%;
+        float: none;
+        text-align: center;
+        
+        margin: 50px auto;
+        padding: 0px; 
+    }
+    
+    .product img{
+        height: 185px;
+        margin-bottom: 10px;
+        transition: all 300ms;
+    }
+    
+    .product img:hover{
+        transform: scale(1.3);
+        transition: all 1000ms;
+        cursor:pointer;
+    }
+    
+    .product h2{
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    
+    .product p{
+        font-weight: bold;
+        font-size: 25px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+    
+    .product a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    .product a:hover{
+        color: rgb(26, 158, 235);
+    }
+    
+    .detail-product{
+        width: 100%;
+        height: 100%;
+        margin: 50px auto;
+    }
+    
+    .detail-product .imagen{
+        display: block;
+        float: none;
+        margin: 0px 75px;
+    }
+    
+    .detail-product .imagen img{
+        width: 250px;
+    }
+    
+    .detail-product .data{
+        display: block;
+        float: none;
+        width: 250px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin: 0px 60px;
+        
+    }
+    
+    .detail-product .data h2, p{
+      margin-top: 10px;
+    }
+    
+    .detail-product .data a{
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    .sub-main .img-carrito{
+        width: 80px;
+        margin: 10px auto;   
+    }
+    
+    .total-carrito{
+        display: block;
+        width: 445px;
+        display: block;
+        float: none;
+        margin-top: 40px;
+        padding: 0px 15px;
+        margin-bottom: 40px;
+        
+    }
+    
+    .delete-carrito{
+        display: block;
+        float: left;
+        margin-top: 0px;
+        padding: 0px 15px;
+        margin-bottom: 40px;
+        
+    }
+    
+    .total-carrito h3{
+        display: block;
+        float: none;
+        margin-top: 0px;
+        margin: 35px;
+    }
+    
+    .total-carrito a{
+        display: block;
+        float: none;
+        margin: 0px;
+    }
+    
+    table{
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        text-align: center;
+    }
+    
+    table th{
+        padding: 5px;
+    }
+    
+    table td{
+        border-top: 1px solid #ccc;
+        padding: 5px;
+    }
+    
+    table td:hover{
+        cursor: pointer;
+    }
+    
+    .pedido-detalle table{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    
+    
+    #footer{
+        clear: both;
+        text-align: center;
+        padding: 10px 0px;
+        color: white;
+        background: #222222;
+        border-top: 4px solid #01b1ea;
+    }
+    
+    .alert{
+        border: none;
+        background: #3b7ae0;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px rgba(19, 14, 14, 0.349);
+    }
+    
+    .alert-success{
+        background: rgb(19, 139, 19);
+    }
+    
+    .alert-danger{
+        background: rgb(226, 38, 38);
+    }
+    
+    .success-crearCategoria{
+        background-color: rgb(137 255 137 / 68%);
+        border-color: rgb(137 255 137 / 68%);
+    }
+    
+    .thump{
+        width: 100px;
+    }
+    
+    .updown-cantidad{
+        width: 100%;
+        margin: 15px auto;
+    }
+    
+    .updown-cantidad a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    .updown-cantidad .up-cantidad{
+        margin: 0 10px;
+        background: #1C9115;
+        padding: 4.6px 8.6px;
+        border-radius: 5px;
+    }
+    
+    .updown-cantidad .down-cantidad{
+        margin: 0 10px;
+        background: #1C9115;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    
+    .up-cantidad:hover,
+     .down-cantidad:hover{
+        transform: scale(1.1);
+        opacity: 8;
+        box-shadow: 5px 5px 4px #ccc;
+        transition: all 300ms;
+    }
+
+    .nav-menu-visible{
+        left: 0;
+    }
+
+    /*table responsive*/
+
+    .table-wrapper {
+        width: 100%;
+        overflow: auto;
+      }
+      
+      .table-wrapper table {
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      
+      .table-wrapper table thead {
+        position: -webkit-sticky; /* Safari... */
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+      
+      .table-wrapper table thead th,
+      .table-wrapper table tbody td {
+        padding: 10px;
+      }
+}
