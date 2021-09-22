@@ -1,6 +1,6 @@
 
 
-<h1>Listado de Carrito</h1>
+<h1 id="carrito">Listado de Carrito</h1>
 
 <?php if(isset($_SESSION['carrito'])):?>
     <div class="sub-main">
@@ -20,7 +20,7 @@
     <div class="table-wrapper">
     <table>
         <thead>
-            <tr>
+            <tr class="table-card-th">
                 <th>IMAGEN</th>
                 <th>NOMBRE</th>
                 <th>PRECIO</th>
@@ -35,7 +35,7 @@
                 $producto = $elemento['producto'];
             ?>
 
-            <tr>
+            <tr id="<?=$producto->id?>" class="table-card-tr">
                 <td>
                     <?php if(!empty($producto->imagen)):?>
                     <img src="<?= base_url.'uploads/images/'.$producto->imagen?>" class="img-carrito">
@@ -52,8 +52,8 @@
                 <td>
                     <?= $elemento['cantidad']?>
                     <div class="updown-cantidad">
-                        <a class="up-cantidad" href="<?=base_url?>carrito/up&indice=<?=$indice?>">+</a>
-                        <a class="down-cantidad" href="<?=base_url?>carrito/down&indice=<?=$indice?>">-</a>
+                        <a class="up-cantidad" href="<?=base_url?>carrito/up&indice=<?=$indice?>?#<?=$producto->id?>">+</a>
+                        <a class="down-cantidad" href="<?=base_url?>carrito/down&indice=<?=$indice?>?#<?=$producto->id?>">-</a>
                     </div>
                 </td>
                 <td>
@@ -69,7 +69,7 @@
 
     <div class="total-carrito">
         <h3>Precio total: S/. <?= $stats['total']?></h3>
-        <a href="<?=base_url?>pedido/index" class="button">Hacer pedido</a>
+        <a href="<?=base_url?>pedido/index?#pedido" class="button">Hacer pedido</a>
     </div>
     
     <div class="delete-carrito">

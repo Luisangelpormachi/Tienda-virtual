@@ -1,7 +1,7 @@
 
 <?php if(isset($_SESSION['pedido']) && $_SESSION['pedido'] == 'confirm'):?>
 
-<h1>Tu pedido se ha confirmado</h1>
+<h1 id="confirmado">Tu pedido se ha confirmado</h1>
 
 <div class="sub-main">    
     <p>

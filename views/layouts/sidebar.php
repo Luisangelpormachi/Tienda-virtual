@@ -13,7 +13,7 @@
                 <a href="<?=base_url?>carrito/index">Total S/. <?=$stats['total']?></a>
             </li>
             <li>
-                <a href="<?=base_url?>carrito/index">Ver Carrito</a>
+                <a href="<?=base_url?>carrito/index?#main">Ver Carrito</a>
             </li>
         </ul>
     </div>
@@ -52,13 +52,13 @@
 
             <?php if(isset($_SESSION['admin'])):?>
 
-            <li><a href="<?= base_url ?>categoria/index">Gestionar categorias</a></li>
-            <li><a href="<?= base_url ?>producto/gestion">Gestionar productos</a></li>
-            <li><a href="<?= base_url ?>pedido/gestion">Gestionar pedidos</a></li>
+            <li><a href="<?= base_url ?>categoria/index?#categorias">Gestionar categorias</a></li>
+            <li><a href="<?= base_url ?>producto/gestion?#productos">Gestionar productos</a></li>
+            <li><a href="<?= base_url ?>pedido/gestion?#pedidos">Gestionar pedidos</a></li>
 
             <?php endif; ?>
 
-            <li><a href="<?= base_url ?>pedido/mis_pedidos">Mis pedidos</a></li>   
+            <li><a href="<?= base_url ?>pedido/mis_pedidos?#pedidos">Mis pedidos</a></li>   
             <li><a href="<?= base_url ?>usuario/logout">Cerrar Sesión</a></li>
 
         

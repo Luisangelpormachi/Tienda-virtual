@@ -918,8 +918,21 @@ table td:hover{
         margin: 0px 75px;
     }
     
+    @media  (max-width: 388px){
+        .detail-product .imagen{
+            display: block;
+            float: none;
+            margin: 0px 0px;
+        }
+    }
+
     .detail-product .imagen img{
         width: 250px;
+    }
+   
+    .center{
+        margin: 0px auto;
+        display: block;
     }
     
     .detail-product .data{
@@ -928,8 +941,18 @@ table td:hover{
         width: 250px;
         margin-top: 0px;
         margin-right: 0px;
-        margin: 0px 60px;
-        
+        margin: 0px auto;     
+    }
+
+    @media  (max-width: 388px){
+        .detail-product .data{
+            display: block;
+            float: none;
+            width: 250px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin: 0px 20px;     
+        }
     }
     
     .detail-product .data h2, p{
@@ -948,20 +971,20 @@ table td:hover{
     
     .total-carrito{
         display: block;
-        width: 445px;
+        width: 100%;
         display: block;
         float: none;
-        margin-top: 40px;
-        padding: 0px 15px;
-        margin-bottom: 40px;
+        margin-top: 0px;
+        padding: 0px;
+        margin-bottom: 25px;
         
     }
     
     .delete-carrito{
         display: block;
-        float: left;
+        float: none;
         margin-top: 0px;
-        padding: 0px 15px;
+        padding: 0px;
         margin-bottom: 40px;
         
     }
@@ -971,18 +994,30 @@ table td:hover{
         float: none;
         margin-top: 0px;
         margin: 35px;
+        text-align: center;
     }
     
     .total-carrito a{
         display: block;
         float: none;
-        margin: 0px;
+        margin: 0px auto;
     }
     
     table{
         width: 100%;
-        border: 1px solid rgba(0, 0, 0, 0.288);
+        border-bottom: 0px solid #222;
         text-align: center;
+    }
+
+    .table-card-tr{
+        display: flex;
+        flex-direction: column;        
+    }
+    .table-card-th{
+        
+            padding: 5px;
+            display: none;
+        
     }
     
     table th{

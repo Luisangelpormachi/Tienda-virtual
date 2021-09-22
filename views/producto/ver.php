@@ -3,9 +3,9 @@
     <div class="detail-product">
         <div class="imagen">
             <?php if(!empty($pro->imagen)):?>
-            <img src="<?= base_url.'uploads/images/'.$pro->imagen?>">
+            <img src="<?= base_url.'uploads/images/'.$pro->imagen?>"  class="center">
             <?php else:?>
-            <img src="<?= base_url?>assets/img/camiseta.png">
+            <img src="<?= base_url?>assets/img/camiseta.png" class="center">
             <?php endif;?>
         </div>
         <div class="data">

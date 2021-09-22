@@ -2,8 +2,8 @@
 
 <?php $limit = $limit->fetch_object();?>      
 
-<div class="sub-main">
-    <a href="<?= base_url ?>categoria/create" class="button button-function">Crear categoria</a>
+<div id="categorias" class="sub-main">
+    <a href="<?= base_url ?>categoria/create?#categoria" class="button button-function">Crear categoria</a>
     <div class="table-wrapper">
     <table>
         <thead>

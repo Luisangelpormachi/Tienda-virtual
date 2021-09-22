@@ -133,13 +133,13 @@ class ProductoController{
                         $producto['success-update'] = 'success';
                         $_SESSION['producto'] = $producto;
     
-                        header('location:'.base_url.'producto/gestion');
+                        header('location:'.base_url.'producto/gestion?#productos');
                     }else{
     
                         $producto['failed'] = 'failed';
                         $_SESSION['producto'] = $producto;
     
-                        header('location:'.base_url.'producto/edit&id='.$id);
+                        header('location:'.base_url.'producto/edit&id='.$id.'?#producto');
                     }
 
                 }else{
@@ -151,13 +151,13 @@ class ProductoController{
                         $producto['success'] = 'success';
                         $_SESSION['producto'] = $producto;
     
-                        header('location:'.base_url.'producto/gestion');
+                        header('location:'.base_url.'producto/gestion?#productos');
                     }else{
     
                         $producto['failed'] = 'failed';
                         $_SESSION['producto'] = $producto;
     
-                        header('location:'.base_url.'producto/create');
+                        header('location:'.base_url.'producto/create?#producto');
                     }
                 }           
                 
@@ -175,7 +175,7 @@ class ProductoController{
 
                 $_SESSION['errores'] = $errores;
                 $_SESSION['campos'] = $campos;
-                header('location:'.base_url.'producto/create');        
+                header('location:'.base_url.'producto/create?#producto');        
 
                 }
 
@@ -225,7 +225,7 @@ class ProductoController{
 
         }
 
-        header('location:'.base_url.'producto/gestion');
+        header('location:'.base_url.'producto/gestion?#productos');
     }
 
 }

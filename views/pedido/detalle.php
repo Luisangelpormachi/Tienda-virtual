@@ -1,7 +1,7 @@
 
 <?php if($pedido != null):?>
 
-    <h1>Detalle de Pedido N° <?= $pedido->id  ?></h1>
+    <h1 id="pedido">Detalle de Pedido N° <?= $pedido->id  ?></h1>
 
     <div class="sub-main">   
     <?php if(isset($_SESSION['admin'])): ?> 

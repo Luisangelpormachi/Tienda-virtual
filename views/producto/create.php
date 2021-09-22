@@ -1,6 +1,6 @@
 <?php if(isset($edit) && isset($pro) && is_object($pro)): ?>
     
-    <h1>Editar Producto "<?=$pro->nombre?>"</h1>
+    <h1 id="producto">Editar Producto "<?=$pro->nombre?>"</h1>
     <?php  
     $base_url = base_url."producto/save&id=".$pro->id;
     $value_submit = "Actualizar";
@@ -12,7 +12,7 @@
 
     ?>
 <?php else:?>
-    <h1>Crear Productos</h1>
+    <h1 id="producto">Crear Productos</h1>
     <?php  
     $base_url = base_url."producto/save";
     $value_submit = "Guardar";

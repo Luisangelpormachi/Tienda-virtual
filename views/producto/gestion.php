@@ -1,4 +1,4 @@
-<h1>Gestion Producto</h1>
+<h1 id="productos">Gestion Producto</h1>
 
 
 
@@ -20,7 +20,7 @@
     <div class="alert alert-danger">failed on delete</div>
 <?php endif; ?>
 
-<a href="<?= base_url ?>producto/create" class="button button-function">Crear Producto</a>
+<a href="<?= base_url ?>producto/create?#producto" class="button button-function">Crear Producto</a>
 <div class="table-wrapper">
 <table>
     <thead>

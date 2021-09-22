@@ -1,9 +1,9 @@
 
 <?php if(isset($gestion)): ?>
-<h1>Gestión de pedidos</h1>
+<h1 id="pedidos">Gestión de pedidos</h1>
 
 <?php else:?>
-<h1>Mis pedidos</h1>
+<h1 id="pedidos">Mis pedidos</h1>
 
 <?php endif;?>   
 
@@ -25,7 +25,7 @@
             <?php while($pedido = $pedidos->fetch_object()):?>
                 <tr>      
                     <td>
-                        <a href="<?=base_url?>pedido/detalle&id=<?=$pedido->id?>">
+                        <a href="<?=base_url?>pedido/detalle&id=<?=$pedido->id?>?#pedido">
                         <?= $pedido->id ?>
                         </a>        
                     </td>             

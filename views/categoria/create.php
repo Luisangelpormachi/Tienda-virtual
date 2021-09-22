@@ -1,4 +1,4 @@
-<h1>Crear categoria</h1>
+<h1 id="categoria">Crear categoria</h1>
 
 <form action="<?= base_url ?>categoria/save" method="POST" class="form-register">
 

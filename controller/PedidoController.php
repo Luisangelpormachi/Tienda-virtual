@@ -84,7 +84,7 @@ class PedidoController{
                     $_SESSION['pedido'] = 'failed';
                 }
 
-                header('location:'.base_url.'pedido/confirmado');
+                header('location:'.base_url.'pedido/confirmado?#confirmado');
 
             }else{
                 
@@ -211,7 +211,7 @@ class PedidoController{
                 }
             }
 
-            header('Location:'.base_url.'pedido/detalle&id='.$id);
+            header('Location:'.base_url.'pedido/detalle&id='.$id.'?#pedido');
         }
         
     }

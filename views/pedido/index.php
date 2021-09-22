@@ -1,10 +1,10 @@
 <?php if(isset($_SESSION['identity'])) :?>
     
-    <h1>Hacer Pedido</h1>
+    <h1 id="pedido">Hacer Pedido</h1>
        
         <form action="<?=base_url?>pedido/add" method="POST" class="form-register   ">
 
-            <a href="<?=base_url?>carrito/index">Ver los productos y los precios del pedido</a>
+            <a href="<?=base_url?>carrito/index?#carrito">Ver los productos y los precios del pedido</a>
 
             <label for="">Provincia</label>
             <input type="text" name="provincia" value="<?= isset($_SESSION['campos-pedido']['provincia']) ? $_SESSION['campos-pedido']['provincia'] : ''; ?>">
