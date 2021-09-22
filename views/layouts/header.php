@@ -2,14 +2,15 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title> Tienda de camisetas </title>
+        <title> Shoplapq </title>
         <link rel="stylesheet" href="<?= base_url ?>assets/css/style.css">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script defer src="https://kit.fontawesome.com/93ef79ad81.js" crossorigin="anonymous"></script>
-        <script defer src="<?=base_url?>assets/js/index.js"></script>     
+        <script defer src="<?=base_url?>assets/js/index.js"></script>
+        <link rel="shortcut icon" href="<?=base_url?>assets/img/favicon.png">     
     </head>
     <body>
         <div id="container">
@@ -20,7 +21,7 @@
                     <a href="<?= base_url ?>" class="cont-img">
                         <img src="<?= base_url ?>assets/img/camiseta.png" alt="camiseta logo">
                     </a>
-                    <a href="<?= base_url ?>">TIENDA DE CAMISETAS</a>
+                    <a href="<?= base_url ?>">TIENDA DE ROPA</a>
                 </div>                
             </header>
 
