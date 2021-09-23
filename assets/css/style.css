@@ -718,6 +718,11 @@ table td:hover{
         background: #222222;
         border-radius: 5px;
     }
+
+    #sidebar ul li:hover{
+        background:#01b1ea;
+        cursor: pointer;
+    }
     
     #sidebar ul li a{
         text-decoration: none;

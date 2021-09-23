@@ -11,3 +11,5 @@ RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteRule ^(.*)/(.*) index.php?controller=$1&method=$2 
 
 </IfModule>
+
+
